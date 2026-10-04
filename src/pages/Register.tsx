@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 
 function Register() {
+  const API_URL = "https://thelastcommit.onrender.com";
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
@@ -23,7 +24,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/participants/register",
+        `${API_URL}/api/participants/register`,
         {
           method: "POST",
           headers: {

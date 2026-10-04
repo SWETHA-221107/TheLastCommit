@@ -23,7 +23,7 @@ function Admin() {
   const [loggedIn, setLoggedIn] = useState(
     Boolean(localStorage.getItem("adminToken"))
   );
-
+  const API_URL = "https://thelastcommit.onrender.com";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -42,12 +42,12 @@ function Admin() {
     try {
       const [participantsResponse, analyticsResponse] =
         await Promise.all([
-          fetch("http://localhost:5000/api/admin/participants", {
+          fetch(`${API_URL}/api/admin/participants`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }),
-          fetch("http://localhost:5000/api/admin/analytics", {
+          fetch(`${API_URL}/api/admin/analytics`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -84,7 +84,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/login",
+        `${API_URL}/api/admin/login`,
         {
           method: "POST",
           headers: {
