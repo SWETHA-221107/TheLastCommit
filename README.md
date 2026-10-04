@@ -1,75 +1,155 @@
-# React + TypeScript + Vite
+# THE LAST COMMIT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A futuristic hackathon registration platform built for developers who are ready to make their final push count.
 
-Currently, two official plugins are available:
+## 🚀 Live Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Frontend:** https://the-last-commit.vercel.app
 
-## React Compiler
+**Backend:** https://thelastcommit.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**GitHub:** https://github.com/SWETHA-221107/TheLastCommit
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 About The Project
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**The Last Commit** is a full-stack hackathon website designed with a developer-focused, futuristic interface.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The platform allows participants to register for the hackathon and provides an admin portal to manage registrations and view useful participation analytics.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The website focuses on:
 
-```
+- Modern interactive UI
+- Responsive design
+- Smooth animations
+- Hackathon registration
+- Secure admin authentication
+- Participant management
+- Registration analytics
+- CSV export
+- MongoDB data storage
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🌐 Public Website
 
-```
+- Futuristic developer-themed interface
+- Animated hero section
+- Interactive UI elements
+- Responsive design
+- Hackathon story and mission sections
+- Timeline
+- Challenge section
+- FAQ
+- Registration call-to-action
+
+### 📝 Participant Registration
+
+Participants can register by providing:
+
+- Full Name
+- Email
+- Phone Number
+- Year
+- College
+- Department
+- Team Name
+
+Registration data is stored in MongoDB.
+
+### 🔐 Admin Portal
+
+The admin portal provides:
+
+- Admin username/password authentication
+- JWT-based authentication
+- Participant dashboard
+- Total participant count
+- Total team count
+- Year-wise distribution
+- College-wise distribution
+- Participant search
+- Year filtering
+- CSV export
+- Logout functionality
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Framer Motion
+- Lucide React
+- HTML
+- CSS
+
+### Backend
+
+- Node.js
+- TypeScript
+- Express.js
+- JWT
+- bcrypt
+- Mongoose
+
+### Database
+
+- MongoDB
+- MongoDB Atlas
+
+### Deployment
+
+- Vercel — Frontend
+- Render — Backend
+- MongoDB Atlas — Database
+
+---
+
+## 📂 Project Structure
+
+```text
+TheLastCommit/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Footer.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ParticleDrift/
+│   │
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   ├── Register.tsx
+│   │   └── Admin.tsx
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+│
+├── server/
+│   ├── src/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── server.ts
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── .gitignore
+├── README.md
+├── prompts.md
+├── package.json
+└── package-lock.json
